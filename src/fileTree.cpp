@@ -64,12 +64,12 @@ TreeNode* buildTree(const fs::path& path) {
 int main(int argv, char **argc) {
     SetConsoleOutputCP(CP_UTF8);
     if(argv != 2) {
-        std::cout << "Invalid args smh";
+        std::cout << "Invalid args smh" << std::endl;
         return -1;
     }
     fs::path path(argc[1]);
     if(!fs::exists(path)) {
-        std::cout << "Fake path, u fraud";
+        std::cout << "Fake path, u fraud" << std::endl;
     }
     TreeNode* root = buildTree(path);
     root->printTree("");
